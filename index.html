@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Lotus Yoga Italia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            color: #f1f1f1;
+            line-height: 1.6;
+        }
+        
+        /* Header con immagine e testo in sovraimpressione */
+        .header {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Header.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            z-index: 1;
+        }
+        
+        .header h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #8a2be2, #ff00ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(138, 43, 226, 0.3);
+        }
+        
+        .header p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            background-color: rgba(26, 26, 26, 0.8);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #8a2be2;
+            box-shadow: 0 0 25px #8a2be2;
+            margin-bottom: 2rem;
+        }
+        
+        .logo span {
+            font-size: 2.8rem;
+            color: #8a2be2;
+            font-weight: bold;
+        }
+        
+        /* Sezione con box trasparente e immagine */
+        .section {
+            padding: 5rem 2rem;
+            position: relative;
+        }
+        
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgba(26, 26, 26, 0.7);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .text-box {
+            flex: 1;
+            min-width: 300px;
+            padding: 3rem;
+            background-color: rgba(138, 43, 226, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .text-box h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #8a2be2;
+        }
+        
+        .text-box p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .full-image {
+            flex: 1;
+            min-width: 300px;
+            min-height: 400px;
+            background: url('Foto_1.jpg') no-repeat center center/cover;
+        }
+        
+        /* Sezione contatti */
+        .contacts {
+            background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .contacts h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #8a2be2;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #8a2be2, #ff00ff);
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.5);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #8a2be2;
+        }
+        
+        footer p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header p {
+                font-size: 1.2rem;
+            }
+            
+            .text-box, .full-image {
+                min-width: 100%;
+            }
+            
+            .text-box {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header con immagine e testo in sovraimpressione -->
+    <header class="header">
+        <div class="logo">
+            <span>BL</span>
+        </div>
+        <div class="header-content">
+            <h1>Black Lotus Italia</h1>
+            <p></p>
+        </div>
+    </header>
+    
+    <!-- Sezione con box trasparente e immagine -->
+    <section class="section">
+        <div class="section-content">
+            <div class="text-box">
+                <h2></h2>
+                <p>Black Lotus Yoga arose unexpectedly through Ty Landrum’s deep devotion to Ashtanga, evolving during the quiet of the global lockdown. What began as a spontaneous shift in his personal practice soon revealed itself as a new form of vinyasa, merging breath, movement, and creative energy in an entirely fresh way. This practice, rooted in tradition yet pushing beyond its boundaries, now stands as an offering to others—an exploration of the body’s natural intelligence and the sacred connection between movement and breath.</p>
+            </div>
+            <div class="full-image">
+                <!-- L'immagine è impostata come background nel CSS -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sezione contatti -->
+    <section class="contacts">
+        <h2>Contatti</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <p>Email: info@blacklotus.it</p>
+                <p>Sede: Italia</p>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2023 Black Lotus Italiano - Community di Cybersecurity</p>
+        <p>Tutti i contenuti sono rilasciati sotto licenza MIT</p>
+    </footer>
+</body>
+</html>

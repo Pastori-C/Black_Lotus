@@ -40,7 +40,7 @@
         .header h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #8a2be2, #ff00ff);
+            background: linear-gradient(45deg, #303030, #ffffff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -72,45 +72,63 @@
             font-weight: bold;
         }
         
-       /* Sezione stile header */
-        .section {
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        padding: 0; /* elimino padding extra */
-            }
-
-        .section img {
-            width: 100%;
-            height: auto; /* mantiene proporzioni */
-            display: block;
-            object-fit: contain; /* immagine intera */
+       /* Sezione testo */
+        .section-text {
+            display: flex;
+            justify-content: center;
+            padding: 3rem 1rem;
+            background-color: rgba(26,26,26,0.7);
         }
 
-        /* Box testo in sovraimpressione */
         .section-content {
-            position: absolute;
-            top: 10%; /* avvicina il testo sopra (puoi regolare) */
-            left: 50%;
-            transform: translateX(-50%);
             max-width: 800px;
-            background-color: rgba(26, 26, 26, 0.7); /* opaco trasparente */
-            padding: 2rem;
-            border-radius: 12px;
             text-align: center;
             color: #f1f1f1;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
         }
 
         .section-content h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
-            color: #8a2be2;
         }
-        
+
+        .section-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Galleria immagini */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 colonne */
+            gap: 1rem;
+            padding: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive: su tablet 2 colonne, su mobile 1 */
+        @media (max-width: 992px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Sezione contatti */
         .contacts {
             background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
@@ -121,7 +139,7 @@
         .contacts h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            color: #8a2be2;
+            color: #ffffff;
         }
         
         .contact-content {
@@ -144,7 +162,7 @@
             display: inline-flex;
             width: 60px;
             height: 60px;
-            background: linear-gradient(45deg, #8a2be2, #ff00ff);
+            background: linear-gradient(45deg, #424242, #ffffff);
             border-radius: 50%;
             justify-content: center;
             align-items: center;
@@ -164,7 +182,7 @@
             background-color: #0a0a0a;
             text-align: center;
             padding: 2rem;
-            border-top: 1px solid #8a2be2;
+            border-top: 1px solid #ffffff;
         }
         
         footer p {
@@ -202,19 +220,26 @@
             <p></p>
         </div>
     </header>
-    
-    <section class="section">
-    <img src="Foto_1.jpg" alt="Black Lotus Yoga">
+
+    <section class="section-text">
     <div class="section-content">
         <h2>Black Lotus Yoga</h2>
         <p>
-            Black Lotus Yoga arose unexpectedly through Ty Landrum’s deep devotion to Ashtanga,
+        Black Lotus Yoga arose unexpectedly through Ty Landrum’s deep devotion to Ashtanga,
             evolving during the quiet of the global lockdown. What began as a spontaneous shift 
             in his personal practice soon revealed itself as a new form of vinyasa...
         </p>
     </div>
     </section>
 
+    <section class="gallery">
+    <img src="Foto_1.jpg" alt="Black Lotus Yoga">
+    <img src="Foto_1.jpg" alt="Black Lotus Yoga">
+    <img src="Foto_1.jpg" alt="Black Lotus Yoga">
+    <img src="Foto_1.jpg" alt="Black Lotus Yoga">
+    </section>
+
+    
     
     <!-- Sezione contatti -->
     <section class="contacts">
